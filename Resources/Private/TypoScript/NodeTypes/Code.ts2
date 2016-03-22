@@ -1,0 +1,11 @@
+prototype(PunktDe.CodeView:Code) < prototype(TYPO3.Neos:Content) {
+
+    codeAttributes = TYPO3.TypoScript:Attributes {
+        class = TYPO3.TypoScript:RawArray {
+            language = ${'language-' + q(node).property('language')}
+
+            showLineNumbers = 'line-numbers'
+            showLineNumbers.@if.isActivated = ${q(node).property('showLineNumbers')}
+        }
+    }
+}

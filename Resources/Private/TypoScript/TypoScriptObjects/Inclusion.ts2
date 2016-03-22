@@ -1,0 +1,31 @@
+prototype(Page) {
+    head.stylesheets.prism = TYPO3.TypoScript:Tag {
+        tagName = 'link'
+
+        attributes {
+            rel = 'stylesheet'
+            href = TYPO3.TypoScript:ResourceUri {
+                path = 'resource://PunktDe.CodeView/Public/Styles/Prism.css'
+            }
+        }
+
+        @if.jsLoadingActivates = ${Configuration.setting('PunktDe.CodeView.loadCSS')}
+        @if.codeInstanceIsPresent = ${q(node).children('[instanceof TYPO3.Neos:ContentCollection]').find('[instanceof PunktDe.CodeView:Code]').count() > 0}
+        @position = 'after site'
+    }
+
+    body.javascripts.prism = TYPO3.TypoScript:Tag {
+        tagName = 'script'
+
+        attributes {
+            src = TYPO3.TypoScript:ResourceUri {
+                path = 'resource://PunktDe.CodeView/Public/JavaScript/Prism.min.js'
+            }
+        }
+
+        @if.jsLoadingActivated = ${Configuration.setting('PunktDe.CodeView.loadJS')}
+        @if.codeInstanceIsPresent = ${q(node).children('[instanceof TYPO3.Neos:ContentCollection]').find('[instanceof PunktDe.CodeView:Code]').count() > 0}
+
+        @position = 'after site'
+    }
+}

@@ -1,0 +1,48 @@
+'PunktDe.CodeView:Code':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: Code
+    icon: icon-code
+    position: 300
+    inspector:
+      groups:
+        source:
+          label: Source
+  properties:
+    source:
+      type: string
+      ui:
+        label: Source
+        inspector:
+          group: source
+          editor: TYPO3.Neos/Inspector/Editors/CodeEditor
+        reloadIfChanged: true
+    language:
+      type: string
+      defaultValue: bootstrapLightbox
+      ui:
+        label: Theme
+        inspector:
+          group: source
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              html:
+                label: HTML
+              php:
+                label: PHP
+              javascript:
+                label: JavaScript
+              bash:
+                label: Bash
+              yaml:
+                label: YAML
+    showLineNumbers:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: 'Show Line Numbers'
+        reloadIfChanged: true
+        inspector:
+          group: source

@@ -1,0 +1,15 @@
+{
+    "name": "punktde/codeview",
+    "type": "typo3-flow-plugin",
+    "description": "Provides a neos cms nodeType do display code",
+    "license": ["MIT"],
+    "require": {
+        "typo3/neos": "*",
+        "typo3/neos-nodetypes": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "PunktDe\\CodeView": "Classes"
+        }
+    }
+}
