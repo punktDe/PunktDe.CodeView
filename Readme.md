@@ -1,7 +1,7 @@
 [![Latest Stable Version](https://poser.pugx.org/punktde/codeview/v/stable)](https://packagist.org/packages/punktde/codeview) [![Total Downloads](https://poser.pugx.org/punktde/codeview/downloads)](https://packagist.org/packages/punktde/codeview) [![Latest Unstable Version](https://poser.pugx.org/punktde/codeview/v/unstable)](https://packagist.org/packages/punktde/codeview) [![License](https://poser.pugx.org/punktde/codeview/license)](https://packagist.org/packages/punktde/codeview)
 
 # CodeView
-This package provides a node type to display code using the code highlighter prism (http://http://prismjs.com/).
+This package provides a node type to display code using the code highlighter prism (http://prismjs.com/).
 
 # Installation and integration
 
