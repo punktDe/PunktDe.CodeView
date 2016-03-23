@@ -1,4 +1,6 @@
-prototype(Page) {
+prototype(TYPO3.Neos:Page) {
+    @context.codeInstancesPresent = ${q(node).children('[instanceof TYPO3.Neos:ContentCollection]').find('[instanceof PunktDe.CodeView:Code]').count() > 0}
+
     head.stylesheets.prism = TYPO3.TypoScript:Tag {
         tagName = 'link'
 
@@ -9,8 +11,8 @@ prototype(Page) {
             }
         }
 
-        @if.jsLoadingActivates = ${Configuration.setting('PunktDe.CodeView.loadCSS')}
-        @if.codeInstanceIsPresent = ${q(node).children('[instanceof TYPO3.Neos:ContentCollection]').find('[instanceof PunktDe.CodeView:Code]').count() > 0}
+        @if.cssLoadingActivated = ${Configuration.setting('PunktDe.CodeView.loadCSS')}
+        @if.codeInstanceIsPresent = ${codeInstancesPresent}
         @position = 'after site'
     }
 
@@ -24,7 +26,7 @@ prototype(Page) {
         }
 
         @if.jsLoadingActivated = ${Configuration.setting('PunktDe.CodeView.loadJS')}
-        @if.codeInstanceIsPresent = ${q(node).children('[instanceof TYPO3.Neos:ContentCollection]').find('[instanceof PunktDe.CodeView:Code]').count() > 0}
+        @if.codeInstanceIsPresent = ${codeInstancesPresent}
 
         @position = 'after site'
     }
