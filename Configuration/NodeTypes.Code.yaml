@@ -32,6 +32,8 @@
                 label: HTML
               php:
                 label: PHP
+              ruby:
+                label: Ruby
               javascript:
                 label: JavaScript
               bash:
