@@ -48,3 +48,14 @@
         reloadIfChanged: true
         inspector:
           group: source
+    highlightLines:
+      type: string
+      ui:
+        label: 'Highlight Lines'
+        help:
+          message: |
+            A single number refers to the line with that number. Ranges are denoted by two numbers, separated with a hyphen (-). Multiple line numbers or ranges are separated by commas. Whitespace is allowed anywhere and will be stripped off.
+            Examples: 5 / 1-5 / 1,2-5
+        reloadIfChanged: true
+        inspector:
+          group: source

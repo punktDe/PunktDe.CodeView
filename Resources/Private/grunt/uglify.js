@@ -4,6 +4,7 @@ module.exports = {
             'node_modules/prismjs/prism.js',
 
             'node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js',
+            'node_modules/prismjs/plugins/line-highlight/prism-line-highlight.js',
 
             'node_modules/prismjs/components/prism-bash.js',
             'node_modules/prismjs/components/prism-javascript.js',

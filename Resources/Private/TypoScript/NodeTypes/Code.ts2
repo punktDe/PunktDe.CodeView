@@ -8,4 +8,9 @@ prototype(PunktDe.CodeView:Code) < prototype(TYPO3.Neos:Content) {
             showLineNumbers.@if.isActivated = ${q(node).property('showLineNumbers')}
         }
     }
+
+    preAttributes = TYPO3.TypoScript:Attributes {
+        data-line = ${q(node).property('highlightLines')}
+        data-line.@if.isSpecified = ${q(node).property('highlightLines')}
+    }
 }
