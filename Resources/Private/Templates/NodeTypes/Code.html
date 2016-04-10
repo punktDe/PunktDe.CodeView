@@ -1,1 +1,4 @@
-<pre {preAttributes -> f:format.raw()}><code {codeAttributes -> f:format.raw()}">{node.properties.source}</code></pre>
+<div {attributes -> f:format.raw()}>
+    <pre {preAttributes -> f:format.raw()}><code {codeAttributes -> f:format.raw()}">{node.properties.source}</code></pre>
+    <f:if condition="{node.properties.description}"><p class="code-description">{node.properties.description}</p></f:if>
+</div>

@@ -2,7 +2,20 @@
 @import "PrismLineNumbers";
 @import "PrismLineHighlight";
 
-pre {
-  border-radius: 0;
-  border: none;
+.punktde-codeview-code {
+
+  margin: 20px 0;
+
+  pre {
+    margin: 0;
+    border-radius: 0;
+    border: none;
+  }
+
+  .code-description {
+    color: rgba(99, 102, 106, 1);
+    margin-bottom: 5px;
+    margin-bottom: 0.3rem;
+  }
 }
+
