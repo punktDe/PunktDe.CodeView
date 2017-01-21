@@ -1,12 +1,12 @@
 prototype(TYPO3.Neos:Page) {
     @context.codeInstancesPresent = ${q(node).children('[instanceof TYPO3.Neos:ContentCollection]').find('[instanceof PunktDe.CodeView:Code]').count() > 0}
 
-    head.stylesheets.prism = TYPO3.TypoScript:Tag {
+    head.stylesheets.prism = Neos.Fusion:Tag {
         tagName = 'link'
 
         attributes {
             rel = 'stylesheet'
-            href = TYPO3.TypoScript:ResourceUri {
+            href = Neos.Fusion:ResourceUri {
                 path = 'resource://PunktDe.CodeView/Public/Styles/Prism.css'
             }
         }
@@ -16,11 +16,11 @@ prototype(TYPO3.Neos:Page) {
         @position = 'after site'
     }
 
-    body.javascripts.prism = TYPO3.TypoScript:Tag {
+    body.javascripts.prism = Neos.Fusion:Tag {
         tagName = 'script'
 
         attributes {
-            src = TYPO3.TypoScript:ResourceUri {
+            src = Neos.Fusion:ResourceUri {
                 path = 'resource://PunktDe.CodeView/Public/JavaScript/Prism.min.js'
             }
         }

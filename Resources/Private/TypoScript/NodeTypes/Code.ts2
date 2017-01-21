@@ -1,7 +1,7 @@
 prototype(PunktDe.CodeView:Code) < prototype(TYPO3.Neos:Content) {
 
-    codeAttributes = TYPO3.TypoScript:Attributes {
-        class = TYPO3.TypoScript:RawArray {
+    codeAttributes = Neos.Fusion:Attributes {
+        class = Neos.Fusion:RawArray {
             language = ${'language-' + q(node).property('language')}
 
             showLineNumbers = 'line-numbers'
@@ -9,7 +9,7 @@ prototype(PunktDe.CodeView:Code) < prototype(TYPO3.Neos:Content) {
         }
     }
 
-    preAttributes = TYPO3.TypoScript:Attributes {
+    preAttributes = Neos.Fusion:Attributes {
         data-line = ${q(node).property('highlightLines')}
         data-line.@if.isSpecified = ${q(node).property('highlightLines')}
     }
