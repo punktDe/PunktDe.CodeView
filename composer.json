@@ -4,8 +4,8 @@
     "description": "Provides a neos cms nodeType do display code",
     "license": ["MIT"],
     "require": {
-        "typo3/neos": "*",
-        "typo3/neos-nodetypes": "*"
+        "typo3/neos": "~2.3.0",
+        "typo3/neos-nodetypes": "~2.3.0"
     },
     "autoload": {
         "psr-0": {
