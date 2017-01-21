@@ -1,5 +1,5 @@
-prototype(TYPO3.Neos:Page) {
-    @context.codeInstancesPresent = ${q(node).children('[instanceof TYPO3.Neos:ContentCollection]').find('[instanceof PunktDe.CodeView:Code]').count() > 0}
+prototype(Neos.Neos:Page) {
+    @context.codeInstancesPresent = ${q(node).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof PunktDe.CodeView:Code]').count() > 0}
 
     head.stylesheets.prism = Neos.Fusion:Tag {
         tagName = 'link'

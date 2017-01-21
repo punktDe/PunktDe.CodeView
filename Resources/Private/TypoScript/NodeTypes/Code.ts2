@@ -1,4 +1,4 @@
-prototype(PunktDe.CodeView:Code) < prototype(TYPO3.Neos:Content) {
+prototype(PunktDe.CodeView:Code) < prototype(Neos.Neos:Content) {
 
     codeAttributes = Neos.Fusion:Attributes {
         class = Neos.Fusion:RawArray {
