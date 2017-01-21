@@ -5,6 +5,6 @@ PunktDe:
     loadJS: true
 Neos:
   Neos:
-    typoScript:
+    fusion:
       autoInclude:
         PunktDe.CodeView: true
