@@ -1,11 +1,10 @@
-TYPO3:
-  Neos:
-    typoScript:
-      autoInclude:
-        'PunktDe.CodeView': true
-
 
 PunktDe:
   CodeView:
     loadCSS: true
     loadJS: true
+Neos:
+  Neos:
+    typoScript:
+      autoInclude:
+        PunktDe.CodeView: true

@@ -1,7 +1,7 @@
 
 'PunktDe.CodeView:Code':
   superTypes:
-    'TYPO3.Neos:Content': true
+    'Neos.Neos:Content': true
   ui:
     label: Code
     icon: icon-code
@@ -17,7 +17,7 @@
         label: Source
         inspector:
           group: source
-          editor: TYPO3.Neos/Inspector/Editors/CodeEditor
+          editor: Neos.Neos/Inspector/Editors/CodeEditor
         reloadIfChanged: true
     description:
       type: string
@@ -26,7 +26,7 @@
         help.message: 'The file name or a short description of the code block.'
         inspector:
           group: source
-          editor: TYPO3.Neos/Inspector/Editors/TextAreaEditor
+          editor: Neos.Neos/Inspector/Editors/TextAreaEditor
         reloadIfChanged: true
     language:
       type: string
@@ -35,7 +35,7 @@
         label: Language
         inspector:
           group: source
-          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
           editorOptions:
             values:
               html:
