@@ -49,6 +49,8 @@
                 label: Bash
               yaml:
                 label: YAML
+              none:
+                label: 'other/no markup'
     showLineNumbers:
       type: boolean
       defaultValue: true
