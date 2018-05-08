@@ -29,7 +29,7 @@
         reloadIfChanged: true
     language:
       type: string
-      defaultValue: bootstrapLightbox
+      defaultValue: none
       ui:
         label: Language
         inspector:
