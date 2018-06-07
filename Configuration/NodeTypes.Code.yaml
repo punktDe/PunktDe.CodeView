@@ -22,7 +22,8 @@
       type: string
       ui:
         label: Description
-        help.message: 'The file name or a short description of the code block.'
+        help:
+          message: 'The file name or a short description of the code block.'
         inspector:
           group: source
           editor: Neos.Neos/Inspector/Editors/TextAreaEditor
@@ -63,7 +64,8 @@
       type: string
       ui:
         label: 'Highlight Lines'
-        help.message: "A single number refers to the line with that number. Ranges are denoted by two numbers, separated with a hyphen (-). Multiple line numbers or ranges are separated by commas. Whitespace is allowed anywhere and will be stripped off.\nExamples: 5 / 1-5 / 1,2-5\n"
+        help:
+          message: "A single number refers to the line with that number. Ranges are denoted by two numbers, separated with a hyphen (-). Multiple line numbers or ranges are separated by commas. Whitespace is allowed anywhere and will be stripped off.\nExamples: 5 / 1-5 / 1,2-5\n"
         reloadIfChanged: true
         inspector:
           group: source
