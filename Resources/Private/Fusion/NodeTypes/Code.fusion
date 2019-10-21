@@ -1,4 +1,5 @@
 prototype(PunktDe.CodeView:Code) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://PunktDe.CodeView/Private/Templates/NodeTypes/Code.html'
 
     codeAttributes = Neos.Fusion:Attributes {
         class = Neos.Fusion:RawArray {
