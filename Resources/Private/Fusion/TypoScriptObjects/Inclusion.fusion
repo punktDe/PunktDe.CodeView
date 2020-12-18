@@ -13,7 +13,6 @@ prototype(Neos.Neos:Page) {
 
         @if.cssLoadingActivated = ${Configuration.setting('PunktDe.CodeView.loadCSS')}
         @if.codeInstanceIsPresent = ${codeInstancesPresent}
-        @position = 'after site'
     }
 
     body.javascripts.prism = Neos.Fusion:Tag {
@@ -27,7 +26,5 @@ prototype(Neos.Neos:Page) {
 
         @if.jsLoadingActivated = ${Configuration.setting('PunktDe.CodeView.loadJS')}
         @if.codeInstanceIsPresent = ${codeInstancesPresent}
-
-        @position = 'after site'
     }
 }
