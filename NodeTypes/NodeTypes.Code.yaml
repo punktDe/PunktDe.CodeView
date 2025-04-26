@@ -1,0 +1,72 @@
+'PunktDe.CodeView:Code':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Code
+    icon: icon-code
+    position: 300
+    group: extended
+    inspector:
+      groups:
+        source:
+          label: Source
+  properties:
+    source:
+      type: string
+      ui:
+        label: Source
+        inspector:
+          group: source
+          editor: Neos.Neos/Inspector/Editors/CodeEditor
+        reloadIfChanged: true
+    description:
+      type: string
+      ui:
+        label: Description
+        help:
+          message: 'The file name or a short description of the code block.'
+        inspector:
+          group: source
+          editor: Neos.Neos/Inspector/Editors/TextAreaEditor
+        reloadIfChanged: true
+    language:
+      type: string
+      defaultValue: none
+      ui:
+        label: Language
+        inspector:
+          group: source
+          editor: Neos.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              html:
+                label: HTML
+              php:
+                label: PHP
+              ruby:
+                label: Ruby
+              javascript:
+                label: JavaScript
+              bash:
+                label: Bash
+              yaml:
+                label: YAML
+              none:
+                label: 'other/no markup'
+    showLineNumbers:
+      type: boolean
+      defaultValue: true
+      ui:
+        label: 'Show Line Numbers'
+        reloadIfChanged: true
+        inspector:
+          group: source
+    highlightLines:
+      type: string
+      ui:
+        label: 'Highlight Lines'
+        help:
+          message: "A single number refers to the line with that number. Ranges are denoted by two numbers, separated with a hyphen (-). Multiple line numbers or ranges are separated by commas. Whitespace is allowed anywhere and will be stripped off.\nExamples: 5 / 1-5 / 1,2-5\n"
+        reloadIfChanged: true
+        inspector:
+          group: source

@@ -1,12 +1,9 @@
 default:
-  - 'build'
-
+  - build
 w:
-  - 'build'
-  - 'watch'
-
-
+  - build
+  - watch
 build:
-  - 'uglify'
-  - 'concat'
-  - 'compass'
+  - uglify
+  - concat
+  - compass

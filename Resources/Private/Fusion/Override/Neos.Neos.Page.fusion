@@ -1,0 +1,30 @@
+prototype(Neos.Neos:Page) {
+    @context.codeInstancesPresent = ${q(node).children('[instanceof Neos.Neos:ContentCollection]').find('[instanceof PunktDe.CodeView:Code]').count() > 0}
+
+    head.stylesheets.prism = Neos.Fusion:Tag {
+        tagName = 'link'
+
+        attributes {
+            rel = 'stylesheet'
+            href = Neos.Fusion:ResourceUri {
+                path = 'resource://PunktDe.CodeView/Public/Styles/Prism.css'
+            }
+        }
+
+        @if.cssLoadingActivated = ${Configuration.setting('PunktDe.CodeView.loadCSS')}
+        @if.codeInstanceIsPresent = ${codeInstancesPresent}
+    }
+
+    body.javascripts.prism = Neos.Fusion:Tag {
+        tagName = 'script'
+
+        attributes {
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://PunktDe.CodeView/Public/JavaScript/Prism.min.js'
+            }
+        }
+
+        @if.jsLoadingActivated = ${Configuration.setting('PunktDe.CodeView.loadJS')}
+        @if.codeInstanceIsPresent = ${codeInstancesPresent}
+    }
+}

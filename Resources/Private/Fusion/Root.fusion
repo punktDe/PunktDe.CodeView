@@ -1,2 +1,2 @@
-include: TypoScriptObjects/*
+include: Override/*
 include: NodeTypes/*

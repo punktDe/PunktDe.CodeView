@@ -1,17 +1,19 @@
 prototype(PunktDe.CodeView:Code) < prototype(Neos.Neos:Content) {
     templatePath = 'resource://PunktDe.CodeView/Private/Templates/NodeTypes/Code.html'
 
-    codeAttributes = Neos.Fusion:Attributes {
-        class = Neos.Fusion:RawArray {
+    codeAttributes = Neos.Fusion:DataStructure {
+        class = Neos.Fusion:DataStructure {
             language = ${'language-' + q(node).property('language')}
 
             showLineNumbers = 'line-numbers'
             showLineNumbers.@if.isActivated = ${q(node).property('showLineNumbers')}
         }
+        @process.makeAttributes = ${Neos.Array.toHtmlAttributesString(value)}
     }
 
-    preAttributes = Neos.Fusion:Attributes {
+    preAttributes = Neos.Fusion:DataStructure {
         data-line = ${q(node).property('highlightLines')}
         data-line.@if.isSpecified = ${q(node).property('highlightLines')}
+        @process.makeAttributes = ${Neos.Array.toHtmlAttributesString(value)}
     }
 }
