@@ -42,10 +42,10 @@
                 label: HTML
               php:
                 label: PHP
-              ruby:
-                label: Ruby
               javascript:
                 label: JavaScript
+              typescript:
+                label: TypeScript
               bash:
                 label: Bash
               yaml:
